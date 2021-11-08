@@ -1,58 +1,118 @@
-package day03_datacasting;
+package day02_variables_scanner;//package olustururken kücük harfler esastir
 
-import java.util.Scanner;
-
-public class C1_Scanner01 {
+public class C01_Variables { //class objesi olustururken büyük harfler esastir
 
 	public static void main(String[] args) {
-		// Soru 5 : asagidaki gibi yazdiralim
-		//Isminiz: Ahmet
-		//Soyisminiz: Bulut
+		//1- Farkli 3 data türünde variable olusturun ve bunlari yazdirin
 		
-		//Kursumuza katiliminiz alinmistir, tesekkür ederiz.
 		
-		Scanner scan = new Scanner(System.in);
-		System.out.println("Lütfen isim ve soyisim giriniz, \n isminizi yazdiktan sonra ENTER basiniz");
-		//syso icinde alt satira gecmek icin \n yazilir, yukaridaki gibi
-		//\n den sonra bosluk birakirsak ikinci  satirin basinda bosluk olusur.
+	String kelime = "Merhaba"; //Satirdaki kod sonunda mutlaka ; kullanilir,  kelime degeri Merhaba olan bir String dir
+	                           //String class represents character strings
+	
+	System.out.println(kelime); //kelimenin variable oldugunu anlar ve kelime variable'in degerini ekrana yazdirir
+	
+	System.out.println("kelime");//kelime yazdirir, cünkü buradaki kelime tirnak icindedir yani degisken degildir
+	
+	int sayi = 20;
+	
+	System.out.println(  sayi ); //20 yazdirir
+	
+	
+	System.out.println("Girilen sayi " + sayi + " dir"); //ekrana "Girilen sayi 20 dir" diye yazdirir.
+	
+	sayi = 55555; // sayiyi degistirmek icin artik int sayi = 333 yazamaya gerek yok, sadece sayi = 2000 yazilir,
+	               //cünkü artik sayi bir integer olarak tanimlidir
 		
-		String name = scan.nextLine();
-		String surname = scan.nextLine();
-		
-		//next() sadece ilk kelimeyi alir, girilen deger daha uzun ise ilk kelimeden sonrasi kalir
-		//nextLine() ise o satirin sonuna kadar girilen tüm degerleri alir.
-		
-		System.out.println("Isminiz : " + name + "\nSoyisminiz :" + surname + "\nKursumuza katiliminiz alinmistir, tesekkür ederiz.");
-		
-		// \n muhakkak tirnak icinde olacaktir, yukarida bakiniz..
-		
-       /*
-        Lütfen isim ve soyisim giriniz, 
-         isminizi yazdiktan sonra ENTER basiniz
-        Ahmet
-        Senyurt
-        Isminiz : Ahmet
-        Soyisminiz :Senyurt
-        Kursumuza katiliminiz alinmistir, tesekkür ederiz.
-        */
-		
+	System.out.println("Girilen sayi " + sayi + " dir");//ekrana "Girilen sayi 55555 dir" diye yazdirir. cünkü sayi yeni bir deger almistir
+	
+	boolean tatildeMi = true;
+	
+	System.out.println(tatildeMi);
+	
+	//konsolda bu sene tatile gittiniz mi? true yazdirmak icin
+	
 
-		System.out.println("Isminiz : " + name + "\nSoyisminiz :" + surname + "\nKursumuza katiliminiz alinmistir, \ntesekkür ederiz.");
-		/*
-		Lütfen isim ve soyisim giriniz, 
-		 isminizi yazdiktan sonra ENTER basiniz
-		Ahmet
-		Senyurt
-		Isminiz : Ahmet
-		Soyisminiz :Senyurt
-		Kursumuza katiliminiz alinmistir, 
-		tesekkür ederiz.
-		*/
+	System.out.println("konsolda bu sene tatile gittiniz mi? " + tatildeMi);
+	//konsolda bu sene tatile gittiniz mi? true
+	
+	/*
+	
+	2 - isim ve soyisim icin iki variable olusturun ve bunlari 
+	
+	isminiz : Mehmet
+	soysminiz: Bulutluoz
+	
+	seklinde yazdirin
+	
+	 */
 		
-		scan.close();
-		//Scanner kapatildi, daha calismaz..
+	String name = "Mehmet";
+	String surname = "Bulutluoz";
+			
+	System.out.println("Isminiz : " + name);
+	System.out.println("Soyisminiz : " + surname);
+	
+	//3 - Iki farkli tamsayi data türünde 2 variable olusturun ve bunlarin toplamini yazdirin
+	
+	int sayi1 = 10;
+	byte sayi2 = 5;
+	double sayi3 = 3.6;
+	double sayi14 = 2.4452;
+	float sayi12 = 3.455f;
+	float sayi13 = 4.5558f;
+	
+			
+	
+	
+	
+
+	System.out.println(sayi12);
+	
+	System.out.println(sayi12+sayi3);
+	
+	System.out.println(sayi3+sayi14);	
+	
+
+	System.out.println(sayi12+sayi14);
+	
+	System.out.println(sayi13);
+	
+	
+	System.out.println(sayi1 + sayi2);
+	//15
+	
+	System.out.println("Girilen sayi =  " + sayi1 + sayi2); //String ile integer ifade bu sekilde yazilirsa system hepsini String olarak algilar
+	//Girilen sayi = 105
+	
+	System.out.println("Girilen sayi =  " + (sayi1 + sayi2));//integer degeri parantez icine alinirsa o zaman String ile integer ayri ayri yazilir
+	//Girilen sayi = 15 
+	//String ve sayisal islemleri birlikte yaptirdigimizda matematiksel islemi parantez icine almak gerekiyor
+	
+	
+	System.out.println(sayi3);
+	//3.6
+	
+	System.out.println(sayi3 + sayi2);
+	//8.6
+	
+	System.out.println("Toplam : " + (sayi3 + sayi2));
+	//Toplam : 8.6
 		
+	
+	//char türünde bir variable olusturun ve yazdirin
+		
+char karakter = '$';
+System.out.println(karakter);
+//$
+
+System.out.println(20 + karakter);
+//56 yani 20 +36,  burada 36 '$' karakterinin ASCII codu 36
+//Java o karakter yerine ASCII tablosundaki degeri kullanir
+
+System.out.println((20) + karakter);
+//56 yani 20 +36,  burada 36 '$' karakterinin ASCII codu 36
+//Java o karakter yerine ASCII tablosundaki degeri kullanir
+
 	}
 
 }
-
