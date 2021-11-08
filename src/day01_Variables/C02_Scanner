@@ -1,0 +1,51 @@
+package day01_variables;
+
+import java.util.Scanner;   //Scanner scan kodunda Scanner alti cizili oluyor, onun üzerine tiklayip 
+                               // fix etmemiz gerekiyor -import.util secilince buraya yazilmis oluyor
+public class C02_Scanner01 {
+	//class ismi büyük harfle baslar
+
+	       public static void main(String[] args) {
+		     //main bir methoddur, entry point dur, 
+		
+		     //kullanicidan bilgi almak icin 3 adim lazimdir:
+		     //1. Scanner class indan bir object olusturuyoruz, burada scan herhangi bir degiskendir, ona ahmet de diyebilirdik
+		
+		      Scanner scan = new Scanner(System.in);
+		
+		      //2. Kullaniciya ne istediginizi bildiren bir mesaj yaziyoruz. 
+		      System.out.println("lütfen isminizi giriniz");
+		
+		      //3. Kullanicidan istenen bilginin data türüne göre bir Variable olusturup 
+		      //konsolda yazilan bilgiyi kodlarimizin icine aliyoruz
+		
+		      String kullaniciIsmi = scan.nextLine(); //camel case seklinde yazilan variable, variable kücük harfle baslar
+		         
+          //kullaniciIsmi degiskenine girilen scan degiskeni next.Line() veya next() ile yazilir.
+		      //next() sadece yazilan cümlenin ilk kelimesini yazdirir. 
+		
+	      	System.out.println("lütfen tekrar isminizi giriniz");
+		
+	      	String kullaniciIsmi2 = scan.next();
+		
+		
+	      	System.out.println("Girdiginiz isim : " + " " + kullaniciIsmi);
+		      System.out.println("Girdiginiz isim : " + " " + kullaniciIsmi2);
+		
+          /*lütfen isminizi giriniz
+		        ahmet senyurt
+		        lütfen tekrar isminizi giriniz
+		        ahmet senyurt
+		        Girdiginiz isim :  ahmet senyurt
+	          Girdiginiz isim :  ahmet
+	        */
+		
+		
+	      	scan.close();
+		
+		
+		
+		
+	}	
+
+}
