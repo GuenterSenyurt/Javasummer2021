@@ -1,1 +1,138 @@
 
+package day03_datacasting;
+
+import java.util.Scanner;
+
+public class Homework_DataCasting {
+
+	public static void main(String[] args) {
+		// Soru 1 Widening
+		
+		byte byteVar = 122;
+		short var1 = byteVar;
+		int var2 = var1;
+		long var3 = var2;
+		float var4 = var3;
+		double var5 = var4;
+		
+		System.out.println("122 sayisi : "+ "byte degiskeni ile " + byteVar);
+		System.out.println("122 sayisi : "+ "short degiskeni ile " + var1);
+		System.out.println("122 sayisi : "+ "int degiskeni ile " + var2);
+		System.out.println("122 sayisi : "+ "long degiskeni ile " + var3);
+		System.out.println("122 sayisi : "+ "float degiskeni ile " + var4);
+		System.out.println("122 sayisi : "+ "double degiskeni ile " + var5);
+		/*
+		 * 122 sayisi : byte degiskeni ile 122
+           122 sayisi : short degiskeni ile 122
+           122 sayisi : int degiskeni ile 122
+           122 sayisi : long degiskeni ile 122
+           122 sayisi : float degiskeni ile 122.0
+           122 sayisi : double degiskeni ile 122.0
+		 */
+		
+		//Soru 2 Narrowing
+		
+		double var6 = 31.45677;
+		float var7 = (float) var6; 
+		long var8 = (long) var7;
+		int var9 = (int) var8;
+		short var10 = (short) var9;
+		byte var11 = (byte) var10;
+		
+		System.out.println("31.45677 sayisi : "+ "double degiskeni ile " + var6);
+		System.out.println("31.45677 sayisi : "+ "float degiskeni ile " + var7);
+		System.out.println("31.45677 sayisi : "+ "long degiskeni ile " + var8);
+		System.out.println("31.45677 sayisi : "+ "int degiskeni ile " + var9);
+		System.out.println("31.45677 sayisi : "+ "short degiskeni ile " + var10);
+		System.out.println("31.45677 sayisi : "+ "byte degiskeni ile " + var11);
+		
+		/*
+		 31.45677 sayisi : double degiskeni ile 31.45677
+         31.45677 sayisi : float degiskeni ile 31.45677
+         31.45677 sayisi : long degiskeni ile 31
+         31.45677 sayisi : int degiskeni ile 31
+         31.45677 sayisi : short degiskeni ile 31
+         31.45677 sayisi : byte degiskeni ile 31
+		 */
+		
+		
+		//Soru 3 Float data türünde data yazdir
+		
+		float var12 = 356.89765f;
+		
+		System.out.println(var12);
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Lütfen bir float giriniz : ");
+		
+		float var13 = scan.nextFloat();
+		
+		System.out.println("Girilen sayi : " + (var13) + " dir");
+		/*
+		 356.89764
+         Lütfen bir float giriniz : 
+         23,8765432 (ENG klavye ile böyle yazildiginda hatasiz sonuc veriyor )
+         Girilen sayi : 23.876543 dir
+		 */
+		
+		
+		scan.close();
+		
+		
+		//Soru 4 
+		
+		double var20 = 255.36;
+		int var21 = (int) var20; // system otomatik casting yapiyor, var20 kirmizi alt cizgi hata veriyor onun üzerine gelip
+									// Add cast to 'int' tiklayinca,  (int) otomatik geliyor
+		byte var22 = (byte) var21;
+		
+		System.out.println("255.36 sayisi : \ndouble olarak : " + (var20) + "\ninteger olarak : " + (var21) + "\nve byte olarak :" + (var22));
+		
+		/*
+		 255.36 sayisi : 
+         double olarak : 255.36
+	     integer olarak : 255
+         ve byte olarak :-1
+		 */
+		
+		
+		//Soru 5-6-7
+		
+		int var23 = 355;
+		int var24 = 44;
+		double var25 = var23/var24;
+		float var26 = var23/var24;
+		float var27 = 355;
+		float var28 = 44;
+		double var29 = 355;
+		double var30 = 44;
+		
+	
+		
+		
+		System.out.println(var23/var24); //8  iki integer bölündügünde tamsayi kismini verir
+		System.out.println(var25); //8.0 
+		System.out.println(var26); //8.0
+		System.out.println(var27/var28); // 8.068182 
+		System.out.println(var29/var30); //8.068181818181818
+		System.out.println(var23/var30); //8.068181818181818
+		
+		 /*
+		  8
+          8.0
+          8.0
+          8.068182
+          8.068181818181818
+          8.068181818181818
+		  */
+		
+		
+		// Soru 7
+		
+		System.out.println(var24/var27);  //0.123943664
+		System.out.println(var30/var23);  //0.12394366197183099
+		
+	}
+
+}
