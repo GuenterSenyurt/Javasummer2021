@@ -1,1 +1,37 @@
+package day03_datacasting;
+
+import java.util.Scanner;
+
+public class C2_Scanner02 {
+
+	public static void main(String[] args) {
+		// Soru 7: Kullanicidan ismini alip isminin bas harfini yazdirin
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Lütfen isminizi giriniz");
+		
+		char ilkHarf = scan.next().charAt(0);
+		//scan.next() methodu sadece ilk kelimeyi getirir
+		//charAt(0) methodu 0'daki Char getirir
+		//Javada index sifirdan (0) baslar.
+		//char ilkHarf = scan.next() yazinca import java.util.Scanner; otomatik ekrana cikiyor.
+		
+		System.out.println(ilkHarf);
+		System.out.println("Isminizin ilk harfi : " + ilkHarf +" dir" );
+		
+		/*
+		 Lütfen isminizi giriniz
+         Günter Senyurt
+         G
+         Isminizin ilk harfi : G dir
+		 */
+
+		
+		scan.close();
+		
+	}
+	
+
+}
 
