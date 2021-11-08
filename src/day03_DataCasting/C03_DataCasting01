@@ -1,1 +1,36 @@
+package day03_datacasting;
+
+public class C3_DataCasting {
+
+	public static void main(String[] args) {
+		// 
+		
+		byte sayi1 = 17;
+		
+		System.out.println("byte degiskeni ile : " + sayi1);
+				
+	    
+				
+	    short sayi2 = sayi1;
+	    
+	    System.out.println("short degiskeni ile : " + sayi2);
+		//short sayi2 --< declaration (olusturma)
+		// = atama (assigning symbol) sembolü
+		//short sayi2; yazilsa bile yeterlidir, yani sayi2 bir Short data dir. 
+		// sayi1 variable dir. degeri 10 dur ve sayi2 10 degerine sahip olmus olur. 
+		
+        int sayi3 = sayi2;
+        
+        System.out.println("int degiskeni ile : " + sayi3);
+        
+        float sayi4 = sayi3;
+        
+        System.out.println("float degiskeni ile : " + sayi4);
+        
+        double sayi5 = sayi2;
+        
+        System.out.println("double degiskeni ile : " + sayi5);
+	}
+
+}
 
