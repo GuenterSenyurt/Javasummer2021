@@ -1,37 +1,45 @@
-package day03_datacasting;
+package day02_variables_scanner;
 
 import java.util.Scanner;
 
-public class C2_Scanner02 {
+public class C02_Scanner {
 
 	public static void main(String[] args) {
-		// Soru 7: Kullanicidan ismini alip isminin bas harfini yazdirin
+		// Kullanicidan iki tamsayi alip bu sayilarin toplam, fark ve carpimlarini yazdirin
+		
+		
+		//Kullanicidan deger almak icin 3 adim atilir
+		//1. Scanner object olusturulur (new cok kullanilir)
+		//Scanner üzerine gelinir Import Scanner java.util secilir
 		
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.println("Lütfen isminizi giriniz");
+		//2.Kullanicidan ne istedigimizi yazdiralim
 		
-		char ilkHarf = scan.next().charAt(0);
-		//scan.next() methodu sadece ilk kelimeyi getirir
-		//charAt(0) methodu 0'daki Char getirir
-		//Javada index sifirdan (0) baslar.
-		//char ilkHarf = scan.next() yazinca import java.util.Scanner; otomatik ekrana cikiyor.
+		System.out.println("Lütfen iki tamsayi giriniz : " );
 		
-		System.out.println(ilkHarf);
-		System.out.println("Isminizin ilk harfi : " + ilkHarf +" dir" );
+		//3. next methodunu kullanarak girilen degerleri alip, olusturacagimiz variable'lara atayalim
 		
-		/*
-		 Lütfen isminizi giriniz
-         Günter Senyurt
-         G
-         Isminizin ilk harfi : G dir
-		 */
-
+		//	Scanner scan = new Scanner(System.in);
+		//	int sayi4 = scan.nextInt();
+		//  int sayi5 = scan.nextInt();
 		
+		int sayi4 = scan.nextInt();
+		int sayi5 = scan.nextInt();
+		
+		
+		System.out.println("Toplama, Cikarma, Carpma: " + (sayi4+sayi5) + " , " + (sayi4-sayi5) + " , " + (sayi4*sayi5));
+		/*Lütfen iki tamsayi giriniz : 
+	    23
+		45
+		Toplama, Cikarma, Carpma: 68 , -22 , 1035
+		
+		*/
 		scan.close();
 		
+		
+		
+
 	}
-	
 
 }
-
