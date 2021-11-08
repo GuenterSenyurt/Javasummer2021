@@ -1,1 +1,58 @@
 
+package day03_datacasting;
+
+import java.util.Scanner;
+
+public class C1_Scanner01 {
+
+	public static void main(String[] args) {
+		// Soru 5 : asagidaki gibi yazdiralim
+		//Isminiz: Ahmet
+		//Soyisminiz: Bulut
+		
+		//Kursumuza katiliminiz alinmistir, tesekkür ederiz.
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Lütfen isim ve soyisim giriniz, \n isminizi yazdiktan sonra ENTER basiniz");
+		//syso icinde alt satira gecmek icin \n yazilir, yukaridaki gibi
+		//\n den sonra bosluk birakirsak ikinci  satirin basinda bosluk olusur.
+		
+		String name = scan.nextLine();
+		String surname = scan.nextLine();
+		
+		//next() sadece ilk kelimeyi alir, girilen deger daha uzun ise ilk kelimeden sonrasi kalir
+		//nextLine() ise o satirin sonuna kadar girilen tüm degerleri alir.
+		
+		System.out.println("Isminiz : " + name + "\nSoyisminiz :" + surname + "\nKursumuza katiliminiz alinmistir, tesekkür ederiz.");
+		
+		// \n muhakkak tirnak icinde olacaktir, yukarida bakiniz..
+		
+       /*
+        Lütfen isim ve soyisim giriniz, 
+         isminizi yazdiktan sonra ENTER basiniz
+        Ahmet
+        Senyurt
+        Isminiz : Ahmet
+        Soyisminiz :Senyurt
+        Kursumuza katiliminiz alinmistir, tesekkür ederiz.
+        */
+		
+
+		System.out.println("Isminiz : " + name + "\nSoyisminiz :" + surname + "\nKursumuza katiliminiz alinmistir, \ntesekkür ederiz.");
+		/*
+		Lütfen isim ve soyisim giriniz, 
+		 isminizi yazdiktan sonra ENTER basiniz
+		Ahmet
+		Senyurt
+		Isminiz : Ahmet
+		Soyisminiz :Senyurt
+		Kursumuza katiliminiz alinmistir, 
+		tesekkür ederiz.
+		*/
+		
+		scan.close();
+		//Scanner kapatildi, daha calismaz..
+		
+	}
+
+}
