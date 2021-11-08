@@ -1,1 +1,59 @@
+package day03_datacasting;
+
+public class C4_DataCasting02 {
+
+	public static void main(String[] args) {
+		// 
+		
+		double sayi1 = 3.14;
+		int sayi2 = (int) sayi1; //manual casting sayi1 is actually a double but sayi2 is an integer. 
+								//explicit narrowing = manuel onay ile narrowing 
+		
+		//it works but data may be lost..
+		
+	   System.out.println("double degisken : " + sayi1);
+	   
+	   System.out.println("int degisken : " + sayi2);
+	   
+		//double degisken : 3.14
+	    //int degisken : 3 -->data lost..
+	   
+	   
+	   
+	   int sayi5 = 95;
+	   int sayi6 = 6;
+	   System.out.println("bölme sonucu : " + sayi5/sayi6);
+	   //bölünen sayi ve bölünen sayi ikisi de integer ise JAVA sonucu integer olarak verir
+	   //bölme sonucu : 15
+
+	   
+	   double sayi7 = 2000;
+	   int sayi8 = 10;
+	   System.out.println(sayi7/sayi8);
+	   
+	   //200.0 cünkü biri integer biri double dolayisiyla daha genis olana gider
+	   
+	   
+	   double sayi10 = 1500;
+	   double sayi11 = 2300;
+	   double sayi12 = sayi10*sayi11;
+	   double sayi13 = sayi10/sayi11;
+	   
+	   
+	   System.out.println((sayi10) + "\n" + (sayi11) + "\n" + (sayi12) + "\n" + (sayi13));
+	   //System.out.println(sayi10 + "\n" + sayi11 + "\n" + sayi12 + "\n" + sayi13); da yazilsa ayni sekilde ekranda görünür
+	   
+	   /*
+	    1500.0
+        2300.0
+        3450000.0
+        0.6521739130434783
+	    */
+	   
+	   
+	   
+	   
+	}
+
+}
 
